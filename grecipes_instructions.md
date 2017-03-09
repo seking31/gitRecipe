@@ -8,9 +8,9 @@
 | RJ | Sara |
 | Lane | Paul V |
 | Nick | Bill |
-| Louis | Nate |
+| Nate | Tom |
 | Brad | Paul T |
-| Tom |	Anita |
+| Louis |	Anita |
 | Matt | Jordan |
 | Daria |	Stephen |
 | Jeff | Ryan |
