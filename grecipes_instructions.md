@@ -17,7 +17,7 @@
 
 ## Decoupled Applications
 
-* The front end and the back end will have **SEPARATE REPOS**
+* The front end and the back end will have **SEPARATE REPOS**. No forking and cloning for this project. Create brand new repos. 2 repos per team.
 * Deploy the front end to Firebase
 * Deply the backend to Heroku
 
