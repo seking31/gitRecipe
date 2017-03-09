@@ -1,4 +1,4 @@
-# gRecipe 
+# gRecipes 
 
 ## Groups
 
