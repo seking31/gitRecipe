@@ -20,3 +20,7 @@
 * The front end and the back end will have **SEPARATE REPOS**
 * Deploy the front end to Firebase
 * Deply the backend to Heroku
+
+## Instructions
+
+* [gRecipes repo](https://github.com/gSchool/gRecipes)
