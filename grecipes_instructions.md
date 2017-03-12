@@ -21,6 +21,7 @@
 * Deploy the front end to Firebase
   * You can mock out data so you don't have to wait for it with a tool like [json-schema-faker](https://github.com/json-schema-faker/json-schema-faker)
 * Deploy the backend to Heroku (If you try to use `res.render` on the server, you will probably have a bad time.)
+  * You can test out your API without a frontend using tools like `curl`, `http`, and `POSTman`
 
 ## Instructions
 
