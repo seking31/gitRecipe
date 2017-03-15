@@ -1,0 +1,22 @@
+{
+  "name": "reipies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gist.github.com/22e9d0633b3ce2cee2515f262060ea2e.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gist.github.com/22e9d0633b3ce2cee2515f262060ea2e"
+  },
+  "homepage": "https://gist.github.com/22e9d0633b3ce2cee2515f262060ea2e",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
