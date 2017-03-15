@@ -5,12 +5,11 @@ var router = express.Router();
 var knex = require('../knex.js');
 
 
-
-
 router.post('/', function(req, res){
   knex('users').insert({
     name: req.body.name
-  }).then(function(result){
+  })
+  .then(function(result){
     res.json(result);
   });
 });

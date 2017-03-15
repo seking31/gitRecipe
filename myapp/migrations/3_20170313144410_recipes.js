@@ -5,6 +5,8 @@ exports.up = function(knex, Promise) {
         knex.schema.createTable('recipes', function(table) {
             table.increments('id').primary();
             table.string('name');
+            table.integer('user_id').references('id').inTable('users');
+            table.string('url');
           })
         ])
     };

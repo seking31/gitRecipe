@@ -1,32 +1,21 @@
-
 var express = require('express');
 var app = express();
 var router = express.Router();
-var knex = require('./db');
+var knex = require('../knex.js');
+
 
 
 router.post('/', function(req, res){
-//req is array of strings, break them up to be posted, for each insert it 
-  knex('steps').insert({
 
-    name: req.body.name
-
-  }).then(function(result){
-    res.json(result);
-  });
-
+  req.body.steps.forEach(function(element) {
+      knex('steps').insert(element)
+      .then(function(result){
+        res.json(result);
+       })
+  })
 });
 
 
-
-
-router.get('/', function(req, res){
-
-  knex('steps').select().then(function(result){
-    res.json(result);
-  });
-
-});
 
 
 

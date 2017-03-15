@@ -1,5 +1,12 @@
 const environment = process.env.NODE_ENV || 'development';
-const config = require('../knexfile')[environment];
-const knex = require('knex')(config);
+//if run localy it will be development
+//herku will change to production
 
-module.exports = knex;
+const config = require('./knexfile')[environment];
+
+
+const knex = require('knex')
+//returns a function
+
+module.exports = knex(config);
+//pass config to the function

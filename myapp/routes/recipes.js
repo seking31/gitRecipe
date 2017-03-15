@@ -1,22 +1,22 @@
-
 var express = require('express');
 var app = express();
 var router = express.Router();
-var knex = require('./db');
+var knex = require('../knex.js');
+
 
 
 router.post('/', function(req, res){
 
   knex('recipes').insert({
 
-    name: req.body.name
+    name: req.body.name,
+    user_id: req.body.user_id
 
   }).then(function(result){
     res.json(result);
   });
 
 });
-
 
 
 
@@ -31,7 +31,7 @@ router.get('/', function(req, res){
 
 
 router.get('/:id', function(req, res){
-  knex('recipes').where('uid', req.params.id).first().then(function(result){
+  knex('recipes').where('id', req.params.id).first().then(function(result){
     res.json(result);
   });
 
@@ -39,8 +39,9 @@ router.get('/:id', function(req, res){
 
 router.put('/:id', function(req, res){
 
-  knex('recipes').where('uid', req.params.id).update({
-    name: req.body.name
+  knex('recipes').where('id', req.params.id).update({
+    name: req.body.name,
+    user_id: req.body.user_id
   }).then(function(result){
     res.json(result);
   });
@@ -49,7 +50,7 @@ router.put('/:id', function(req, res){
 
 router.delete('/:id', function(req, res){
 
-  knex('recipes').where('uid', req.params.id).del().then(function(result){
+  knex('recipes').where('id', req.params.id).del().then(function(result){
     res.json(result);
   });
 
