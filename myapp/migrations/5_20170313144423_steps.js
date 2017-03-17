@@ -5,7 +5,8 @@ exports.up = function(knex, Promise) {
             table.increments('id').primary();
             table.string('body');
             table.integer('step_number');
-            table.integer('recipe_id').references('id').inTable('recipes');
+            table.integer('recipe_id').references('id').inTable('recipes')
+
           })
         ])
     };

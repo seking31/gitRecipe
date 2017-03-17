@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
 
   development: {
@@ -11,6 +13,3 @@ module.exports = {
   }
 
 };
-
-
-//automatically updated when hosted 

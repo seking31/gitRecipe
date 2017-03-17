@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+var PORT = process.env.PORT || 3000;
+
 
 var users = require('./routes/users');
 var ingredients = require('./routes/ingredients');
@@ -18,7 +21,7 @@ var app = express();
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
+app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,7 +48,7 @@ app.use('/ingredients_recipes', ingredients_recipes);
 app.use('/recipes', recipes);
 app.use('/reviews', reviews);
 app.use('/steps', steps);
-//app.use defines a path that is used in routs 
+//app.use defines a path that is used in routs
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -54,8 +57,9 @@ app.use(function(req, res, next) {
 });
 //if request gets through all routs and does not match, it errors
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+
+app.listen(PORT, function () {
+  console.log('Example app listening on port!' + PORT)
 })
 
 module.exports = app;

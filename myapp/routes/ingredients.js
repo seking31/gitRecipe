@@ -7,13 +7,17 @@ var knex = require('../knex.js');
 
 router.post('/', function(req, res){
 
-  req.body.ingredients.forEach(function(element) {
-      knex('ingredients').insert(element)
-      .then(function(result){
-        res.json(result);
-       })
-  })
-});
+    knex('ingredients').insert({
+
+      name: req.body.name
+
+    })
+    .returning('id')
+    .then(function(result){
+      res.json(result);
+    });
+  });
+
 
 
 
